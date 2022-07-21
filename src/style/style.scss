@@ -80,3 +80,11 @@ main {
         opacity: 1
     }
 }
+
+@media (max-width:1295px) {
+    .app {
+        .bg-decoration {
+            right: -30px;
+        }
+    }
+}
