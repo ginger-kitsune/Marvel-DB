@@ -77,6 +77,7 @@ class CharInfo extends Component {
 
 const View = ({char}) => {
     const {name, description, thumbnail, homepage, wiki, comics} = char;
+    const comicsView = comics.slice(0, 9);
     return (
         <>
             <div className="char__basics">
@@ -100,7 +101,7 @@ const View = ({char}) => {
             <ul className="char__comics-list">
                 {comics.lenght > 0 ? null : 'There is no comics with this character'}
                 {
-                    comics.map((item, i) => {
+                    comicsView.map((item, i) => {
                         return (
                             <li key={i} className="char__comics-item">
                                 {item.name}
